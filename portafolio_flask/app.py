@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import json 
 
 
@@ -7,11 +7,10 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/home')
 def home():
-    return 'este es mi portafoloio Camilo rojas'
-
-
+    # return 'este es mi portafoloio Camilo rojas'
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
